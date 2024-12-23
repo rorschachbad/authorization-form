@@ -1,0 +1,149 @@
+.wrapper {
+  width: 500px;
+  height: 600px;
+  background-color: #d7d7d7;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 30px;
+  color: #424242;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.navigation {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-registration {
+  border-bottom: 2px solid purple;
+  cursor: pointer;
+}
+
+.btn-login {
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  border-bottom: 2px solid purple;
+}
+
+.close {}
+
+.btn-close {
+  cursor: pointer;
+  border: none;
+  background-color: #d7d7d7;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.1s;
+}
+
+.btn-close:hover {
+  color: red;
+}
+
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  max-width: 40%;
+}
+
+.link {
+  width: 40px;
+  height: 40px;
+  background-color: #F6F6F6;
+  border-radius: 100%;
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.apple {
+  color: black;
+}
+
+.facebook {
+  color: #3B5998;
+}
+
+.google {
+  background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%),
+    linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+  ;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.input-field {
+  width: 100%;
+}
+
+.input-field {
+  padding: 15px 5px;
+  outline: none;
+  border-radius: 10px;
+  border: 2px solid gray;
+}
+
+.input-field:focus {
+  border-color: #EF498F;
+}
+
+.create-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.news {
+  display: flex;
+  justify-content: start;
+}
+
+.create-account {
+  background-color: #EF498F;
+  border: none;
+  padding: 15px 5px;
+  border-radius: 10px;
+  display: block;
+  cursor: pointer;
+  transition: 0.2s;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.create-account:hover {
+  background-color: #f2267b;
+}
+
+.checkbox {
+  display: block;
+}
