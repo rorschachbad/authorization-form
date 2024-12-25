@@ -9,6 +9,13 @@ function App() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const isCorrectPasswordLength = (pass) => {
+    if (pass.length < 8) {
+      return 'password input-field field-red';
+    }
+    return 'password input-field field-green';
+  }
+
   const onChangeEmail = (e) => {
     setEmail(e.target.value)
   }
@@ -18,7 +25,9 @@ function App() {
   }
 
   const onPushToDataBase = () => {
-    if (email === '' || password === '') return;
+    if (email === '' || password === '' || password.length < 8) return;
+
+    // isCorrectPasswordLength(password);
 
     USERS.push({
       id: new Date().valueOf(),
@@ -29,10 +38,11 @@ function App() {
     setPassword('');
   }
 
-  USERS.forEach(el => {
-    console.log(el.id);
+  // USERS.forEach(el => {
+  //   console.log(el.id);
+  // })
 
-  })
+
 
 
   return (
@@ -64,8 +74,10 @@ function App() {
             <input value={email} onChange={onChangeEmail} className="email input-field" placeholder="E-mail" id="email" type="email" />
           </div>
           <div className="registration-password">
-            <input value={password} onChange={onChangePassword} className="password input-field" placeholder="Password" id="pass" type="password" />
-            <p>8+ characters</p>
+            <input value={password} onChange={onChangePassword} className={isCorrectPasswordLength(password)} placeholder="Password" id="pass" type="password" />
+            {
+              password.length < 8 ? <p className='warrning-pass'>8+ characters</p> : <p className='success-pass'>successfully</p>
+            }
           </div>
         </div>
         <div className="create-btn">
